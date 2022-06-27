@@ -1,0 +1,46 @@
+.trash {
+
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 40px;
+    color: rgb(27, 16, 16);
+}
+
+.trash:hover {
+    color: rgb(165, 24, 24);
+    cursor: pointer;
+}
+
+.exclamation {
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 10px;
+    color: rgb(27, 16, 16);
+}
+
+.exclamation:hover {
+    color: rgb(38, 136, 46);
+    cursor: pointer;
+}
+
+.lable:hover {
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.lable.important {
+    font-weight: bold;
+    color: steelblue;
+}
+
+.TodoIcons {
+    position: absolute;
+    right: 10px;
+}
+
+.TodoIcons svg {
+    margin-left: 5px;
+}
