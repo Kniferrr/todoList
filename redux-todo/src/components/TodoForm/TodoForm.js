@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import "./Todoform.css"
 import Filter from '../Filter/Filter'
 
-import {onSubmit, LableChange} from "../../redusers/todoformReduser"
+import {Submit, LableChange} from "../../redusers/todoformReduser"
 
 import { addTodoItem,SetFilter} from "../../redusers/todoitems"
 
@@ -19,7 +19,7 @@ function TodoForm() {
   const onSubmit = (e) =>{
     e.preventDefault();
     dispatch(addTodoItem(lable))
-  
+    dispatch(Submit())
 }
 
   const onLableChange = (e) => {
