@@ -15,7 +15,9 @@ function TodoForm() {
   const dispatch = useDispatch();
   const lable = useSelector((state) => state.todoform.lable);
 
-
+  if(lable==="work"){
+    throw new Error("Error");
+  }
   const onSubmit = (e) =>{
     e.preventDefault();
     dispatch(addTodoItem(lable))
@@ -25,7 +27,6 @@ function TodoForm() {
   const onLableChange = (e) => {
     e.preventDefault();
     dispatch(LableChange(e.target.value))
-    
   }
 
   const changeFilterAll = () => {
@@ -37,6 +38,7 @@ function TodoForm() {
   const changeFilterDone = () => {
     dispatch(SetFilter("done"))
   }
+  
 
   return (
     
